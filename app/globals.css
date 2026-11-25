@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — 与 echo-uvo 同源的 WorkBuddy 风格，
+ * 但主色换成琥珀橙：Mirror 是"创作者侧"工具，和 Echo（企业侧·薄荷绿）区分开。
+ */
+@theme {
+  --color-brand-50: #fef7ee;
+  --color-brand-100: #fdeedc;
+  --color-brand-200: #fbd9b4;
+  --color-brand-300: #f7bd80;
+  --color-brand-400: #f29c4c;
+  --color-brand-500: #ec8327; /* Mirror amber */
+  --color-brand-600: #d66915;
+  --color-brand-700: #b35212;
+
+  --color-ink-400: #9aa3b2;
+  --color-ink-500: #6b7686;
+  --color-ink-600: #4d5866;
+  --color-ink-900: #101418;
+
+  --color-surface: #f6f7f9;
+
+  --font-sans: ui-sans-serif, -apple-system, "PingFang SC", "HarmonyOS Sans SC",
+    "Microsoft YaHei", "Segoe UI", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-brand-100);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d8dde5 transparent;
+}
