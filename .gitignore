@@ -4,3 +4,5 @@ out/
 *.log
 _ref/
 .env*
+tsconfig.tsbuildinfo
+next-env.d.ts
