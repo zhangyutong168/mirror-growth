@@ -46,10 +46,25 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
               </Link>
             );
           })}
+          {/* P3 雷达已上线首版（单批降级模式），从占位区转正 */}
+          <Link
+            href="/radar"
+            className={`flex items-center gap-2.5 rounded-xl px-3.5 py-2 text-sm transition ${
+              pathname.startsWith("/radar")
+                ? "bg-white font-semibold text-ink-900 shadow-sm"
+                : "font-medium text-ink-600 hover:bg-white/60"
+            }`}
+          >
+            <MIconRadar active={pathname.startsWith("/radar")} />
+            热点雷达
+            <span className="ml-auto rounded-full bg-brand-50 px-1.5 py-0.5 text-[10px] text-brand-600">
+              β
+            </span>
+          </Link>
         </nav>
 
         <div className="mt-auto px-3 pb-4">
-          {(["热点雷达", "达人关注", "账号体检"] as const).map((label) => (
+          {(["达人关注", "账号体检"] as const).map((label) => (
             <div
               key={label}
               className="flex items-center gap-2.5 rounded-xl px-3.5 py-2 text-sm text-ink-400"
