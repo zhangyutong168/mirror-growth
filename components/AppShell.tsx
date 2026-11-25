@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 const NAV = [
   { href: "/", label: "雷达", icon: MIconRadar },
   { href: "/match", label: "对标", icon: MIconTarget },
+  { href: "/insight", label: "选题", icon: MIconBulb },
 ] as const;
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
@@ -109,6 +110,15 @@ function MIconTarget({ active }: { active: boolean }) {
       <circle cx="12" cy="12" r="9" />
       <circle cx="12" cy="12" r="5.5" />
       <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function MIconBulb({ active }: { active: boolean }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={iconCls(active)}>
+      <path d="M9.5 18h5M10.5 21h3" strokeLinecap="round" />
+      <path d="M12 3a6.5 6.5 0 0 0-3.7 11.9c.8.6 1.2 1.3 1.2 2.1h5c0-.8.4-1.5 1.2-2.1A6.5 6.5 0 0 0 12 3z" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
